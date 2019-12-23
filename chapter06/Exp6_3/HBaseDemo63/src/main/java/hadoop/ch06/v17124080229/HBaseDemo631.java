@@ -163,26 +163,26 @@ public class HBaseDemo631 {
 //        get("stu","1001","info1","name");
         System.out.println("----------------------------------------------------------");
         System.out.println("班级：数学17-2");
-        System.out.println("学号：17124080234");
+        System.out.println("学号：17124080229");
         System.out.println("Hadoop实验6.3正在为你呈现...");
         System.out.println("----------------------------------------------------------");
-        System.out.println("创建emp17124080234表,如果已经创建则会打印已创建");
+        System.out.println("创建emp17124080229表,如果已经创建则会打印已创建");
         createTable("emp17124080234","member_id","address","info");
         System.out.println("----------------------------------------------------------");
         System.out.println("查看表是否存在");
-        System.out.println(isTableExist("emp17124080234"));
+        System.out.println(isTableExist("emp17124080229"));
 
         String [] column1 = {"id"};String [] column2 = {"city","country"};
         String [] column3 ={"age","birthday","industry"};
         String [] value1 = {"234"};String [] value2 = {"Meizhou","China"} ;
         String [] value3 = {"21","1998-06-18","student"};
-        insert("Wanghaihong","emp17124080234",column1,value1,column2,value2,column3,value3);
+        insert("","emp17124080229",column1,value1,column2,value2,column3,value3);
 
-        get("emp17124080234","Wanghaihong","info","city");
+        get("emp17124080229","","info","city");
 
-        System.out.println("-------------toolWanghaihong@扫描info:birthday列---------------");
-        scan("emp17124080234","Wanghaihong","info","birthday");
-        System.out.println("-----------------toolWanghaihong@这是底线---------------------");
+        System.out.println("-------------@扫描info:birthday列---------------");
+        scan("emp17124080229","","info","birthday");
+        System.out.println("-----------------@这是底线---------------------");
         close();
     }
 }
