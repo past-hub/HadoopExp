@@ -17,7 +17,7 @@ public class RushMain
         Configuration conf = new Configuration();
 
         Job job = Job.getInstance(conf);
-        job.setJarByClass(App.class);
+        job.setJarByClass(RushMain.class);
 
 
         job.setMapperClass(RushMapper.class);
